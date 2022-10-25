@@ -1,12 +1,22 @@
-<form>
+<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
 
     <div class="form-group">
         <label for="title">Titulo:</label>
-        <input type="text" placeholder="Coloque um titulo" required>
+        <input type="text" placeholder="Coloque um titulo" formControlName="title" required>
+        <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+            <!-- passando a validação do ts aonde o title error significa a validator e o ? 
+                informando se ira existir o valor -->
+            <p *ngIf="title.errors?.['required']">O Titulo è obrigatorio</p>
+        </div>
     </div>
     <div class="form-group">
-        <label for="title">Descrição:</label>
-        <textarea placeholder="O que acontece por lá?" required></textarea>
+        <label for="description">Descrição:</label>
+        <textarea placeholder="O que acontece por lá?" formControlName="description" required></textarea>
+        <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+            <!-- passando a validação do ts aonde o title error significa a validator e o ? 
+                informando se ira existir o valor -->
+            <p *ngIf="description.errors?.['required']">A Descrição  è obrigatorio</p>
+        </div>
     </div>
     <div class="form-group">
         <label for="image">Colque a foto que mais marcou:</label>
