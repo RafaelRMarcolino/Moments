@@ -14,4 +14,13 @@ export class NewMomentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+ async createHandler(event: any){
+
+    // para testar no console do html se a mensagem aparecer e por que o evento esta funcionando
+    console.log('deu certo')
+  }
+
+
+
 }
