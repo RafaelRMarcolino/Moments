@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './compenents/header/header.component';
-import { FooterComponent } from './compenents/footer/footer.component';
-import { AboutComponent } from './compenents/pages/about/about.component';
-import { HomeComponent } from './compenents/pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { NewMomentsComponent } from './components/pages/new-moments/new-moments.component';
+import { MomentsFormComponent } from './components/moments-form/moments-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HomeComponent } from './compenents/pages/home/home.component';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    NewMomentsComponent,
+    MomentsFormComponent
   ],
   imports: [
     BrowserModule,
