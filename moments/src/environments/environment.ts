@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+// adicionado a url para centralizar o local de teste podendo ser adiciodo mais urls accim que precisar
+  production: false,
+  // url da api do adones
+  baseApiUrl: 'http://localhost:3333'
 };
 
 /*
