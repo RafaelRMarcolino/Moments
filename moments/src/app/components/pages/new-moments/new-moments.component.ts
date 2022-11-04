@@ -45,7 +45,6 @@ export class NewMomentsComponent implements OnInit {
 
    // redirect
 
-        //aula 30
 
  }
 

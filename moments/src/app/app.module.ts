@@ -13,6 +13,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewMomentsComponent } from './components/pages/new-moments/new-moments.component';
 import { MomentsFormComponent } from './components/moments-form/moments-form.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { MomentsFormComponent } from './components/moments-form/moments-form.com
     HomeComponent,
     NewMomentsComponent,
     MomentsFormComponent,
+    MessagesComponent,
 
   ],
   imports: [
@@ -31,6 +34,7 @@ import { MomentsFormComponent } from './components/moments-form/moments-form.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
