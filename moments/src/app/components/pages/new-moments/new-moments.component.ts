@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Moment } from 'src/app/model/Moment';
+import { Router } from '@angular/router';
 
 import { MomentsService } from 'src/app/services/moments.service';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-new-moments',
@@ -13,9 +15,14 @@ export class NewMomentsComponent implements OnInit {
   btnText = 'Compartilhar!';
 
   // passando o service aonde tem o metodo post para o contrutor
-  constructor(private momentService: MomentsService) {   }
+  constructor(
+     private momentService: MomentsService,
+     private messageServices: MessagesService,
+     public router: Router
+    ) {   }
 
   ngOnInit(): void {
+
   }
 
 
@@ -39,11 +46,10 @@ export class NewMomentsComponent implements OnInit {
    // subscribe para ocorrer
    // testar o metodo post no coisole network verificar se a resposta e 201
    await this.momentService.createMoment(formData).subscribe()
-   // enviar para o service
 
-   // exibir msg
+  this.messageServices.add('Momento adicionado com sucesso ! ');
 
-   // redirect
+   this.router.navigate(['/']);
 
 
  }
