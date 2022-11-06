@@ -34,7 +34,7 @@ export class NewMomentsComponent implements OnInit {
   const formData = new FormData();
 
   formData.append('title', moment.title)
-  formData.append("description", moment.desciption)
+  formData.append("description", moment.description)
 
   // informando a condição se tiver imagem pois a imagen nao precisa ser obrigatoria
   if(moment.image){

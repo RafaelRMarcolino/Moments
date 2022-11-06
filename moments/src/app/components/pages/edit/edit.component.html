@@ -5,6 +5,6 @@
     </h2>
 
 
-    <app-moments-form [momentData]="moment" [btnText]="btnText"></app-moments-form>
+    <app-moments-form (onSubmit)="editHendler($event)" [momentData]="moment" [btnText]="btnText"></app-moments-form>
 </div>
 
