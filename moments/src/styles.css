@@ -71,3 +71,48 @@ input[type="submit"]:hover{
     border-left: 3px solid #DC3545 ;
     padding-left: .2em;
 }
+
+
+.edit-btn, 
+.remove-btn{
+    border: 1px solid #efefef;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+button fa-icon,
+a fa-icon{
+    margin-right: 0.2em;
+}
+
+
+.edit-btn,
+.edit-btn path{
+    border-color: #007BFF;
+    color: #007Bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path{
+    border-color: #0f6dd1;
+    color: #dfe6ee;
+}
+
+
+
+.remove-btn,
+.remove-btn path{
+    border-color: #cc2929;
+    color: #4e0a0e;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path{
+    border-color: #3d0505;
+    color: #e62455;
+}
+

@@ -28,10 +28,20 @@ export class MomentsService {
     return this.http.get<Response<Moment[]>>(this.apiUrl);
   }
 
+  getMomentsId(id: number): Observable<Response<Moment>>{
+
+    const url = `${this.apiUrl}/${id}`
+    return this.http.get<Response<Moment>>(url);
+  }
+
   // metodo post
   createMoment(formData: FormData):Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 
+  removeMoment(id: number){
+    const url = `${this.apiUrl}/${id}`
+    return this.http.delete(url);
+  }
 
 }
