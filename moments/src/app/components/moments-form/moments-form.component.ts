@@ -18,6 +18,9 @@ export class MomentsFormComponent implements OnInit {
   // deixar o valor default para deixar o valor de quem  for usar o compoenente
   @Input() btnText!: string;
 
+
+  @Input() momentData: Moment | null = null;
+
   // excla,ação informando que o valor sera preenchido
   momentForm!: FormGroup
 
@@ -68,5 +71,4 @@ export class MomentsFormComponent implements OnInit {
   }
 
 
-  // 300000000000000
 }
